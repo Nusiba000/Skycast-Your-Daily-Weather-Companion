@@ -1,0 +1,27 @@
+{
+  "name": "skycast-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
+    "lint": "echo \"(add eslint if desired)\"",
+    "db:seed": "node src/utils/seed.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "mysql2": "^3.10.2"
+  },
+  "description": "Secure backend for the SkyCast Weather Dashboard. - Proxies OpenWeather requests (hides API key from the browser) - Logs user searches in MySQL - Adds CORS, Helmet, and rate limiting - Clean file structure with controllers/services",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
