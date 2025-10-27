@@ -51,4 +51,78 @@ It features a clean and responsive frontend integrated with a robust **Node.js +
 
 ## 🗂️ Folder Structure
 
+Skycast-Your-Daily-Weather-Companion/
+│
+├── backend/
+│ ├── src/
+│ │ ├── config/
+│ │ │ └── db.js # Database connection
+│ │ ├── controllers/
+│ │ │ └── weather.controller.js # Core weather logic
+│ │ ├── middleware/
+│ │ │ ├── errorHandler.js
+│ │ │ └── rateLimiter.js
+│ │ ├── routes/
+│ │ │ └── weather.routes.js # API routes
+│ │ ├── services/
+│ │ │ └── openweather.service.js # API integration
+│ │ └── utils/
+│ │ └── validate.js
+│ └── server.js # Server entry point
+│
+├── frontend/
+│ ├── index.html # Main web UI
+│ ├── style.css # Custom styling
+│ └── app.js # Frontend scripts
+│
+└── README.md
+
+
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🖥 Backend Setup
+
+```bash
+# Navigate to backend directory
+cd backend
+
+# Install dependencies
+npm install
+
+# Create a .env file with:
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=skycast_db
+OPENWEATHER_API_KEY=your_openweather_api_key
+
+# Start the backend server
+npm start
+# or use nodemon for development
+npm run dev
+
+💡 The backend runs on: http://localhost:5000
+
+### 🌐 Frontend Setup
+# Move to frontend directory
+cd frontend
+
+# Open directly in browser:
+index.html
+
+# or run a local dev server
+npx live-server
+
+The frontend connects automatically to your backend API.
+
+### 🔗 API Endpoints
+
+Method	Endpoint	Description
+GET	/api/weather?city={cityName}	Fetch weather by city
+GET	/api/forecast?city={cityName}	Get 5-day forecast
+GET	/health	API health check
 
