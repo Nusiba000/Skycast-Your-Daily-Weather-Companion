@@ -1,5 +1,3 @@
-# Skycast-Your-Daily-Weather-Companion
-
 <!-- 🌤️ Skycast README.md -->
 
 <div align="center">
