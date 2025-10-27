@@ -92,3 +92,117 @@ Skycast-Your-Daily-Weather-Companion/
 │   └── app.js                        # Frontend scripts
 │
 └── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🖥 Backend Setup
+
+```bash
+# Navigate to backend directory
+cd backend
+
+# Install dependencies
+npm install
+
+# Create a .env file with:
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=skycast_db
+OPENWEATHER_API_KEY=your_openweather_api_key
+
+# Start the backend server
+npm start
+# or use nodemon for development
+npm run dev
+```
+
+💡 **The backend runs on:** [http://localhost:5000](http://localhost:5000)
+
+---
+
+### 🌐 Frontend Setup
+
+```bash
+# Move to frontend directory
+cd frontend
+
+# Open directly in your browser:
+index.html
+
+# or run a local dev server
+npx live-server
+```
+
+💡 **The frontend connects automatically** to your backend API.
+
+---
+
+## 🔗 API Endpoints
+
+| Method | Endpoint | Description |
+|:-------|:----------|:-------------|
+| `GET` | `/api/weather?city={cityName}` | Fetch current weather by city |
+| `GET` | `/api/forecast?city={cityName}` | Get 5-day weather forecast |
+| `GET` | `/health` | API health check |
+
+**Example Request:**
+```bash
+GET http://localhost:5000/api/weather?city=London
+```
+
+**Example Response:**
+```json
+{
+  "city": "London",
+  "temperature": 22,
+  "condition": "Cloudy",
+  "humidity": 60
+}
+```
+
+---
+
+## 🧪 Testing
+
+```bash
+npm test
+```
+
+---
+
+## 🖼️ Screenshots
+
+> *(Add your screenshots inside `frontend/screenshots/` and link them below)*
+
+![Home Screen](frontend/screenshots/home.png)  
+![Search Result](frontend/screenshots/search-result.png)
+
+---
+
+## 🧭 Future Improvements
+
+🚀 **Weather Alerts:** Add extreme weather notifications.  
+📍 **Location Detection:** Auto-detect user’s location for faster results.  
+📅 **Historical Data:** Display past weather patterns for research.  
+📊 **Interactive Charts:** Visualize temperature trends over time.  
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and distribute it with attribution.
+
+---
+
+<div align="center">
+🌤️ Developed with ❤️ for innovation and learning.
+
+“Stay informed. Stay weather-ready.”
+☀️ 🌧️ ⛈️ ❄️ 🌈
+</div>
